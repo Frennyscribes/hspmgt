@@ -18,4 +18,5 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>com.mycompany.hospitalmanagementsystem.HospitalManagementSystem</exec.mainClass>
     </properties>
+    
 </project>
