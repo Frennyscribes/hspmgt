@@ -7,6 +7,8 @@
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -44,152 +46,143 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="cc" green="99" red="0" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jLabel1" alignment="0" pref="66" max="32767" attributes="0"/>
+                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Component id="sdeeffects" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel2" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                              <Component id="txtdrugname" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
+                              <Component id="txtdrugcode" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
+                                  <Component id="cnausea" min="-2" pref="87" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cfever" min="-2" pref="87" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="cdiarrhoea" min="-2" pref="87" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="cdrowsiness" min="-2" pref="87" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="issuedate" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel1" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
+                                      <Component id="expirydate" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel7" min="-2" pref="111" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtdrugname" min="-2" pref="265" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="txtprice" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
-                                              <Component id="txtdrugcode" alignment="0" min="-2" pref="265" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="quantity" min="-2" pref="100" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
-                                                  <Component id="add" min="-2" pref="73" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel7" min="-2" pref="53" max="-2" attributes="0"/>
-                                              <Component id="jLabel6" alignment="1" min="-2" pref="53" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="txtpayment" max="32767" attributes="0"/>
-                                              <Component id="txtbalance" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Component id="jLabel8" min="-2" pref="53" max="-2" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="txttotalcost" min="-2" pref="265" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Component id="home" min="-2" pref="73" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="txtlanguage" min="-2" pref="303" max="-2" attributes="0"/>
+                                      <Component id="txtexpirydate" max="32767" attributes="0"/>
+                                      <Component id="txtissuedate" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="71" pref="71" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="quantity" min="-2" pref="100" max="-2" attributes="0"/>
+                          <EmptySpace min="31" pref="740" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+                          <Component id="home" min="-2" pref="132" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="clear" min="-2" pref="73" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="view" min="-2" pref="73" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="add" min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="printinvoice" min="-2" pref="122" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="320" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
-                                          <Component id="txtdrugcode" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="txttotalcost" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                              </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtdrugname" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtpayment" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtbalance" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtdrugcode" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="issuedate" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtprice" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="txtissuedate" min="-2" pref="28" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="expirydate" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtdrugname" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="txtexpirydate" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Component id="txtlanguage" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <Component id="sdeeffects" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="quantity" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cnausea" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cfever" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="add" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="home" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cdiarrhoea" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cdrowsiness" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="quantity" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="138" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                  <Component id="printinvoice" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="268" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="clear" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="home" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="add" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="view" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -197,6 +190,9 @@
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -208,8 +204,8 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="284" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" pref="191" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="413" max="-2" attributes="0"/>
+                      <Component id="jLabel9" min="-2" pref="249" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -217,9 +213,9 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="51" max="32767" attributes="0"/>
+                      <EmptySpace pref="18" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -227,7 +223,16 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel9">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Pharmacy Management System "/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="99" red="0" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="MS Reference Sans Serif" size="36" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="99" red="0" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="PHARMACY "/>
               </Properties>
             </Component>
           </SubComponents>
@@ -242,9 +247,9 @@
             <Property name="text" type="java.lang.String" value="DrugName"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="sdeeffects">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Price"/>
+            <Property name="text" type="java.lang.String" value="Side Effects"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -252,38 +257,27 @@
             <Property name="text" type="java.lang.String" value="Qty"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="expirydate">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Payment"/>
+            <Property name="text" type="java.lang.String" value="Expiry date"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Balance"/>
+            <Property name="text" type="java.lang.String" value="Instruction Language"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="issuedate">
           <Properties>
-            <Property name="text" type="java.lang.String" value="TotalCost"/>
+            <Property name="text" type="java.lang.String" value="Issue Date"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtdrugname">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdrugnameActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtdrugcode">
           <Events>
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtdrugcodeKeyPressed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtprice">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txttotalcost">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtpayment">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtbalance">
+        <Component class="javax.swing.JTextField" name="txtdrugname">
         </Component>
         <Component class="javax.swing.JSpinner" name="quantity">
         </Component>
@@ -294,18 +288,36 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="jTable1">
+            <Component class="javax.swing.JTable" name="tablerecord">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="4" rowCount="4">
+                  <Table columnCount="7" rowCount="4">
+                    <Column editable="true" title="DrugCode" type="java.lang.Object"/>
                     <Column editable="true" title="DrugName" type="java.lang.Object"/>
-                    <Column editable="true" title="Price" type="java.lang.Object"/>
+                    <Column editable="true" title="Side Effects" type="java.lang.Object"/>
                     <Column editable="true" title="Qty" type="java.lang.Object"/>
-                    <Column editable="true" title="Total" type="java.lang.Object"/>
+                    <Column editable="true" title="Issue Date" type="java.lang.Object"/>
+                    <Column editable="true" title="Expiry Date" type="java.lang.Object"/>
+                    <Column editable="true" title="Instruction Language" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -332,25 +344,95 @@
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tablerecordMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="printinvoice">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Print Invoice"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JButton" name="add">
           <Properties>
             <Property name="text" type="java.lang.String" value="ADD"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="home">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Hp\Downloads\HMS ICON\HMS ICON\back (2).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="HOME"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homeActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="txtissuedate">
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="txtexpirydate">
+        </Component>
+        <Component class="com.toedter.components.JLocaleChooser" name="txtlanguage">
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="cnausea">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Nausea"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cnauseaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="cdiarrhoea">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Diarrhoea"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cdiarrhoeaActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="cfever">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Fever"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cfeverActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JCheckBox" name="cdrowsiness">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="buttonGroup1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Drowsiness"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cdrowsinessActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="clear">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CLEAR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="view">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="VIEW "/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

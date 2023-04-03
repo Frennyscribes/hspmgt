@@ -32,11 +32,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -47,30 +43,35 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="80" max="32767" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="99" max="32767" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                  <EmptySpace pref="56" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -78,6 +79,9 @@
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="cc" green="99" red="0" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -92,68 +96,68 @@
                       <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="id" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="gender" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="tgender" min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="lastname" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="firstname" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txtpatientid" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                                          <Component id="txtfirstname" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                              <Component id="roomno" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="35" max="32767" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="bloodgroup" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="txtbloodgroup" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                                          <Component id="txtroomno" min="-2" pref="179" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                  <Component id="txtpatientid" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+                                  <Component id="txtfirstname" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                                      <Component id="roomno" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="35" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="txtlastname" min="-2" pref="179" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="department" min="-2" pref="67" max="-2" attributes="0"/>
+                                      <Component id="bloodgroup" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtdepartment" min="-2" pref="179" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="82" pref="82" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="txtbloodgroup" min="-2" pref="179" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtroomno" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="txtlastname" min="-2" pref="179" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="department" min="-2" pref="67" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="txtdepartment" min="-2" pref="179" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jRadioButton1" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="male" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jRadioButton2" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="female" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                      <Component id="admitpatient" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="home" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                                       <Component id="viewrecords" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="home" min="-2" pref="98" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="patientoptions" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Component id="clear" min="-2" pref="122" max="-2" attributes="0"/>
+                                      <Component id="admitpatient" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="patientoptions" alignment="1" min="-2" pref="174" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
+                      <EmptySpace min="82" pref="82" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -168,13 +172,15 @@
                           <Component id="txtbloodgroup" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtfirstname" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
-                          <Component id="firstname" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="roomno" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtroomno" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="txtroomno" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtfirstname" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                              <Component id="firstname" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="roomno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtlastname" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                           <Component id="lastname" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -182,19 +188,29 @@
                           <Component id="txtdepartment" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="gender" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="admitpatient" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="clear" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="patientoptions" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="20" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="tgender" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="male" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="female" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="home" alignment="1" min="-2" pref="48" max="-2" attributes="0"/>
+                                  <Component id="viewrecords" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="41" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="admitpatient" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="viewrecords" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="home" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="patientoptions" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -227,7 +243,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtlastname">
             </Component>
-            <Component class="javax.swing.JLabel" name="gender">
+            <Component class="javax.swing.JLabel" name="tgender">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Gender"/>
               </Properties>
@@ -247,19 +263,14 @@
                 <Property name="text" type="java.lang.String" value="Department"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtroomno">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtroomnoActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JComboBox" name="txtbloodgroup">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
+                    <StringItem index="0" value="A"/>
+                    <StringItem index="1" value="AB"/>
+                    <StringItem index="2" value="O"/>
+                    <StringItem index="3" value="B"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -270,11 +281,12 @@
             <Component class="javax.swing.JComboBox" name="txtdepartment">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
+                  <StringArray count="5">
+                    <StringItem index="0" value="Surgery"/>
+                    <StringItem index="1" value="Gynae"/>
+                    <StringItem index="2" value="Ortho"/>
+                    <StringItem index="3" value="Pediatrics"/>
+                    <StringItem index="4" value="Oncology"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -282,26 +294,35 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+            <Component class="javax.swing.JRadioButton" name="male">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Male"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="maleActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+            <Component class="javax.swing.JRadioButton" name="female">
               <Properties>
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="buttonGroup1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Female"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="femaleActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="admitpatient">
               <Properties>
                 <Property name="text" type="java.lang.String" value="ADMIT PATIENT "/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="admitpatientActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="viewrecords">
               <Properties>
@@ -313,6 +334,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="home">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\Hp\Downloads\HMS ICON\HMS ICON\back (2).png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="HOME"/>
               </Properties>
               <Events>
@@ -327,10 +351,38 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="patientoptionsActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JComboBox" name="txtroomno">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="6">
+                    <StringItem index="0" value="101a"/>
+                    <StringItem index="1" value="209b"/>
+                    <StringItem index="2" value="378b"/>
+                    <StringItem index="3" value="404a"/>
+                    <StringItem index="4" value="523a"/>
+                    <StringItem index="5" value="600b"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="clear">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CLEAR"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -342,18 +394,18 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="194" max="32767" attributes="0"/>
-                      <Component id="jLabel8" min="-2" pref="99" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                      <EmptySpace pref="149" max="32767" attributes="0"/>
+                      <Component id="jLabel8" min="-2" pref="179" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -361,6 +413,15 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel8">
               <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="99" red="0" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="MS Reference Sans Serif" size="36" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="99" red="0" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="PATIENT "/>
               </Properties>
             </Component>

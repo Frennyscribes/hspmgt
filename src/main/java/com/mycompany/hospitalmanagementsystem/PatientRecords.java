@@ -4,6 +4,16 @@
  */
 package com.mycompany.hospitalmanagementsystem;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Hp
@@ -13,8 +23,13 @@ public class PatientRecords extends javax.swing.JFrame {
     /**
      * Creates new form PatientRecords
      */
+    Connection cn;
+    PreparedStatement pst;
+    ResultSet rs;
+    
     public PatientRecords() {
         initComponents();
+        myconnection();
     }
 
     /**
@@ -30,18 +45,24 @@ public class PatientRecords extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablerecord = new javax.swing.JTable();
         viewrecords = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        dischargepatientid = new javax.swing.JTextField();
+        pd = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         home = new javax.swing.JButton();
         patientoptions = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 153));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jLabel1.setBackground(new java.awt.Color(0, 153, 204));
+        jLabel1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 204));
         jLabel1.setText("PATIENT RECORDS ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -49,19 +70,19 @@ public class PatientRecords extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(129, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(157, 157, 157))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablerecord.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -72,7 +93,7 @@ public class PatientRecords extends javax.swing.JFrame {
                 "ID", "Firstname", "Lastname", "Gender", "Blood Group", "Room No", "Department"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablerecord);
 
         viewrecords.setText("VIEW RECORDS");
         viewrecords.addActionListener(new java.awt.event.ActionListener() {
@@ -81,15 +102,21 @@ public class PatientRecords extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("MS Reference Sans Serif", 0, 12)); // NOI18N
         jLabel2.setText("Enter Patient ID to discharge");
 
-        dischargepatientid.addActionListener(new java.awt.event.ActionListener() {
+        pd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dischargepatientidActionPerformed(evt);
+                pdActionPerformed(evt);
             }
         });
 
         jButton2.setText("DISCHARGE");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         home.setText("HOME");
         home.addActionListener(new java.awt.event.ActionListener() {
@@ -110,33 +137,29 @@ public class PatientRecords extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(66, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(dischargepatientid, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pd, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
                         .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(48, 48, 48)
                         .addComponent(patientoptions))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(50, 50, 50))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                             .addComponent(viewrecords)
-                            .addGap(290, 290, 290)))))
+                            .addGap(290, 290, 290)))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(viewrecords, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -146,11 +169,11 @@ public class PatientRecords extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dischargepatientid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2)
                     .addComponent(home)
                     .addComponent(patientoptions))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -167,9 +190,9 @@ public class PatientRecords extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void dischargepatientidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dischargepatientidActionPerformed
+    private void pdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dischargepatientidActionPerformed
+    }//GEN-LAST:event_pdActionPerformed
 
     private void homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeActionPerformed
         // TODO add your handling code here:
@@ -179,7 +202,8 @@ public class PatientRecords extends javax.swing.JFrame {
 
     private void viewrecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewrecordsActionPerformed
         // TODO add your handling code here:
-       
+        
+       gettablerecords();
     }//GEN-LAST:event_viewrecordsActionPerformed
 
     private void patientoptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_patientoptionsActionPerformed
@@ -187,6 +211,11 @@ public class PatientRecords extends javax.swing.JFrame {
          new Reception().setVisible(true);
         dispose();
     }//GEN-LAST:event_patientoptionsActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        dischargepatient();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,7 +253,6 @@ public class PatientRecords extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField dischargepatientid;
     private javax.swing.JButton home;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -232,8 +260,56 @@ public class PatientRecords extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton patientoptions;
+    private javax.swing.JTextField pd;
+    private javax.swing.JTable tablerecord;
     private javax.swing.JButton viewrecords;
     // End of variables declaration//GEN-END:variables
+
+    private void gettablerecords() {
+        try {
+           myconnection();
+
+            DefaultTableModel model = (DefaultTableModel) tablerecord.getModel();
+            model.setRowCount(0);
+
+            while (rs.next()) {
+                String mydata[] = {rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7)};
+                model.addRow(mydata);
+
+            }
+        } catch (Exception e) {
+            System.out.print(e);
+        }
+    }
+
+    private void myconnection() {
+          try {
+            cn = DriverManager.getConnection("jdbc:mysql://localhost/hospitalsystem ", "root", null);
+            pst=cn.prepareStatement("select * from patient");
+            rs=pst.executeQuery();
+            
+        } catch (SQLException e) {
+            System.out.print(e);
+        }
+    }
+
+    private void dischargepatient()  {
+        String pid=pd.getText();
+     
+        try {
+            
+            myconnection();
+            
+           
+            pst=cn.prepareStatement("DELETE FROM `patient` WHERE ID="+pid);
+            
+            pst.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Patient discharged successfully!");
+            cn.close();
+            pd.setText(" ");
+        } catch (SQLException ex) {
+            Logger.getLogger(PatientRecords.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }
